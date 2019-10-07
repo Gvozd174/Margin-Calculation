@@ -1,17 +1,17 @@
-var inputSum = document.querySelector('#input-sum');            //Сохраняем инпуты
-var inputDiscount = document.querySelector('#input-discount');  //Сохраняем инпуты
-var inputBonuses = document.querySelector('#input-bonuses');    //Сохраняем инпуты
+const inputSum = document.querySelector('#input-sum');            //Сохраняем инпуты
+const inputDiscount = document.querySelector('#input-discount');  //Сохраняем инпуты
+const inputBonuses = document.querySelector('#input-bonuses');    //Сохраняем инпуты
 
 function calculate () {                                         //Функция подсчета
-    var sum = document.querySelector('.sum').value;
-    var discount = document.querySelector('.discount').value;  //Записываем значение полей
-    var bonuses = document.querySelector('.bonuses').value;   
-    var percent = sum / 100 * discount;                         //Получаем %скидки
-    var total = sum - percent - bonuses;                        //Сумма - скидка - бонусы
-    var perc25 = total / 100 * 25;                              // 25% скидка
-    var perc30 = total / 100 * 30;                              // 30% скидка
-    var perc40 = total / 100 * 40;                              // 40% скидка
-    var perc50 = total / 100 * 50;                              // 50% скидка
+    const sum = document.querySelector('.sum').value;
+    const discount = document.querySelector('.discount').value;  //Записываем значение полей
+    const bonuses = document.querySelector('.bonuses').value;   
+    let percent = sum / 100 * discount;                         //Получаем %скидки
+    let total = sum - percent - bonuses;                        //Сумма - скидка - бонусы
+    let perc25 = total / 100 * 25;                              // 25% скидка
+    let perc30 = total / 100 * 30;                              // 30% скидка
+    let perc40 = total / 100 * 40;                              // 40% скидка
+    let perc50 = total / 100 * 50;                              // 50% скидка
     document.querySelector('.Total_25').innerHTML = '25%:' + ' ' + ' ' +  perc25;   //Выводим конечную сумму и делим ее на 25%
     document.querySelector('.Total_30').innerHTML = '30%:' + ' ' + ' ' +  perc30;
     document.querySelector('.Total_40').innerHTML = '40%:' + ' ' + ' ' +  perc40;
